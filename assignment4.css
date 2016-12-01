@@ -7,20 +7,17 @@
   height: auto;
   width: auto;
   max-width: 100%;
-  overflow: hidden;
   background: transparent;
   margin: 0;
   position: static;
 }
 
 .flexsearch-form {
-  overflow: hidden;
   position: relative;
 }
 
 .flexsearch-input-wrapper {
   padding: 0 66px 0 0;
-  overflow: hidden;
 }
 
 .flexsearch-input {
@@ -37,16 +34,15 @@
   box-sizing: content-box;
   height: 60px;
   width: 100%;
-  padding: 0 46px 0 10px;
-  border-color: #888;
-  border-radius: 35px;
-  border-style: solid;
-  border-width: 5px;
+  padding: 5px 46px 0 20px;
+  background-color: transparent;
+  border: transparent;
   color: #333;
   font-family: 'Helvetica', sans-serif;
   font-size: 26px;
   -webkit-appearance: none;
   -moz-appearance: none;
+  position: relative;
 }
 
 .flexsearch-submit {
@@ -95,4 +91,37 @@ input:-moz-placeholder {
   font-weight: bold;
   line-height: 45px;
   text-align: center;
+}
+
+#result {
+  position: absolute;
+  top: 0;
+  min-height: 60px;
+  width: 99%;
+  border: 5px solid #000;
+  border-radius: 35px;
+  z-index: -1;
+}
+
+#result ul {
+  display: none;
+}
+
+#result ul li {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 26px;
+  list-style-type: none;
+}
+
+#result ul li:first-child {
+  padding-top: 50px;
+}
+
+#result ul li a {
+  color: #AAA;
+  text-decoration: none;
+}
+
+#result ul li a:hover {
+  color: blue;
 }
